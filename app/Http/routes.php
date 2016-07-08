@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function ()
+{
     return view('welcome');
 });
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function ()
+{
+    Route::get('/', 'HomeController@index');
+    Route::get('/login', 'AuthController@getLogin');
+    Route::post('/login', 'AuthController@login');
+    Route::get('/logout', 'AuthController@logout');
+});
+
