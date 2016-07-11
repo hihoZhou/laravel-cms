@@ -26,15 +26,15 @@ class AdminComposer
     public function compose(View $view)
     {
 //        $menus = [];//TODO 动态菜单栏
-        $navNeed = true;
-        $navExcepts = [
+        $headerNeed = true;
+        $headerExcepts = [
             '/admin/login'
         ];
-        if ($this->shouldPassThrough($navExcepts))
+        if ($this->shouldPassThrough($headerExcepts))
         {
-            $navNeed = false;
+            $headerNeed = false;
         }
-        $view->with('nav_need', $navNeed);
+        $view->with('headerNeed', $headerNeed);
     }
 
     /**
