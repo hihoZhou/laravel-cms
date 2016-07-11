@@ -165,6 +165,11 @@ return [
          */
         Barryvdh\Debugbar\ServiceProvider::class,
 
+        /**
+         * View Composer
+         */
+        App\Providers\ComposerServiceProvider::class,
+
     ],
 
     /*
