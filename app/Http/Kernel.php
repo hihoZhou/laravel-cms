@@ -51,5 +51,9 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'auth.admin' => \App\Http\Middleware\AdminAuthenticate::class,
 
+        'role' => \Zizaco\Entrust\Middleware\EntrustRole::class,
+        'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
+        'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
+
     ];
 }
